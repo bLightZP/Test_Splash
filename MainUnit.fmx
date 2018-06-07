@@ -7,24 +7,14 @@ object MainForm: TMainForm
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
   OnCreate = FormCreate
+  OnDeactivate = FormDeactivate
   OnResize = FormResize
+  OnShow = FormShow
+  OnHide = FormHide
+  OnFocusChanged = FormFocusChanged
   DesignerMasterStyle = 0
-  object ProgressBarLoading: TProgressBar
-    Orientation = Horizontal
-    Position.X = 126.000000000000000000
-    Position.Y = 74.000000000000000000
-  end
-  object ImageLoading: TImage
-    MultiResBitmap = <
-      item
-      end>
-    Position.X = 32.000000000000000000
-    Position.Y = 51.000000000000000000
-    Size.Width = 79.000000000000000000
-    Size.Height = 43.000000000000000000
-    Size.PlatformDefault = False
-  end
   object Label1: TLabel
     Align = Client
     Size.Width = 640.000000000000000000
@@ -33,5 +23,34 @@ object MainForm: TMainForm
     TextSettings.HorzAlign = Center
     Text = 'Pre-processing complete'
     TabOrder = 3
+  end
+  object ProgressBarLoading: TProgressBar
+    Orientation = Horizontal
+    Position.X = 342.000000000000000000
+    Position.Y = 90.000000000000000000
+  end
+  object ImageLoading: TImage
+    MultiResBitmap = <
+      item
+      end>
+    Position.X = 248.000000000000000000
+    Position.Y = 67.000000000000000000
+    Size.Width = 79.000000000000000000
+    Size.Height = 43.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object EventListBox: TListBox
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 463.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 196.000000000000000000
+    Viewport.Height = 459.000000000000000000
   end
 end

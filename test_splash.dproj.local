@@ -2,12 +2,12 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2017-12-13 15:33:54.000.896,=C:\Users\Yaron\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2018-06-07 13:01:20.309,=C:\Users\Yaron\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2018-06-07 13:02:27.176,Z:\test_splash\MainUnit.pas=C:\Users\Yaron\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2018-06-07 13:02:27.176,Z:\test_splash\MainUnit.fmx=C:\Users\Yaron\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
-    <Transaction>2018-06-07 13:03:57.848,Z:\test_splash\test_splash.dproj=C:\Users\Yaron\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2018-06-07 13:01:20.000.309,=C:\Users\Yaron\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018-06-07 13:02:27.000.176,C:\Users\Yaron\Documents\Embarcadero\Studio\Projects\Unit1.fmx=Z:\test_splash\MainUnit.fmx</Transaction>
+    <Transaction>2018-06-07 13:02:27.000.176,C:\Users\Yaron\Documents\Embarcadero\Studio\Projects\Unit1.pas=Z:\test_splash\MainUnit.pas</Transaction>
+    <Transaction>2018-06-07 13:03:57.000.848,C:\Users\Yaron\Documents\Embarcadero\Studio\Projects\Project1.dproj=Z:\test_splash\test_splash.dproj</Transaction>
   </Transactions>
 	<ActiveMobileDevice>
-		<NoProfile iOSSimulator="iPhone5" Android="6de6d8e2"/>
+		<NoProfile iOSSimulator="iPhone5" Android="Android_4.4.2_API_lvl_19"/>
 	</ActiveMobileDevice>
 </BorlandProject>

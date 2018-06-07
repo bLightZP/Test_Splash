@@ -5,15 +5,22 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
-  FMX.Objects, FMX.Controls.Presentation, FMX.StdCtrls, FMX.Platform;
+  FMX.Objects, FMX.Controls.Presentation, FMX.StdCtrls, FMX.Platform,
+  FMX.Layouts, FMX.ListBox;
 
 type
   TMainForm = class(TForm)
     ProgressBarLoading: TProgressBar;
     ImageLoading: TImage;
     Label1: TLabel;
+    EventListBox: TListBox;
     procedure FormResize(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure FormActivate(Sender: TObject);
+    procedure FormDeactivate(Sender: TObject);
+    procedure FormFocusChanged(Sender: TObject);
+    procedure FormHide(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,6 +38,11 @@ var
 
 {$R *.fmx}
 
+procedure TMainForm.FormActivate(Sender: TObject);
+begin
+  EventListBox.Items.Add('FormActivate');
+end;
+
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
   if TPlatformServices.Current.SupportsPlatformService(IFMXScreenService, IInterface(clientScreenService)) then
@@ -40,10 +52,26 @@ begin
 end;
 
 
+procedure TMainForm.FormDeactivate(Sender: TObject);
+begin
+  EventListBox.Items.Add('FormDeactivate');
+end;
+
+procedure TMainForm.FormFocusChanged(Sender: TObject);
+begin
+  EventListBox.Items.Add('FormFocusChanged');
+end;
+
+procedure TMainForm.FormHide(Sender: TObject);
+begin
+  EventListBox.Items.Add('FormHide');
+end;
+
 procedure TMainForm.FormResize(Sender: TObject);
 var
   I : Integer;
 begin
+  EventListBox.Items.Add('FormResize, clientSize : '+IntToStr(Trunc(ClientWidth))+'x'+IntToStr(Trunc(ClientHeight)));
   If (clientWidth = clientScreenService.GetScreenSize.X) and (clientHeight = clientScreenService.GetScreenSize.Y) then
   Begin
     // Create progress indicator on a black background image
@@ -64,13 +92,18 @@ begin
     Begin
       ProgressBarLoading.Value := I;
       Application.ProcessMessages;
-      Sleep(100);
+      Sleep(25);
     End;
 
     // Hide progress indicator
     ProgressBarLoading.Visible := False;
     ImageLoading.Visible       := False;
   End;
+end;
+
+procedure TMainForm.FormShow(Sender: TObject);
+begin
+  EventListBox.Items.Add('FormShow');
 end;
 
 end.
