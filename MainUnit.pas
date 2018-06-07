@@ -49,6 +49,7 @@ begin
   begin
     clientScreenScale       := clientScreenService.GetScreenScale;
   end;
+  EventListBox.ItemHeight := 24;
 end;
 
 
@@ -98,6 +99,7 @@ begin
     // Hide progress indicator
     ProgressBarLoading.Visible := False;
     ImageLoading.Visible       := False;
+    EventListBox.Items.Add('Finished pre-processing');
   End;
 end;
 
