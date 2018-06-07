@@ -7,6 +7,7 @@ object MainForm: TMainForm
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
+  FullScreen = True
   OnActivate = FormActivate
   OnCreate = FormCreate
   OnDeactivate = FormDeactivate
@@ -18,7 +19,7 @@ object MainForm: TMainForm
   object Label1: TLabel
     Align = Client
     Size.Width = 640.000000000000000000
-    Size.Height = 480.000000000000000000
+    Size.Height = 297.000000000000000000
     Size.PlatformDefault = False
     TextSettings.HorzAlign = Center
     Text = 'Pre-processing complete'
@@ -26,31 +27,30 @@ object MainForm: TMainForm
   end
   object ProgressBarLoading: TProgressBar
     Orientation = Horizontal
-    Position.X = 342.000000000000000000
-    Position.Y = 90.000000000000000000
+    Position.X = 326.000000000000000000
+    Position.Y = 354.000000000000000000
   end
   object ImageLoading: TImage
     MultiResBitmap = <
       item
       end>
-    Position.X = 248.000000000000000000
-    Position.Y = 67.000000000000000000
+    Position.X = 232.000000000000000000
+    Position.Y = 331.000000000000000000
     Size.Width = 79.000000000000000000
     Size.Height = 43.000000000000000000
     Size.PlatformDefault = False
   end
   object EventListBox: TListBox
-    Position.X = 8.000000000000000000
-    Position.Y = 8.000000000000000000
-    Size.Width = 200.000000000000000000
-    Size.Height = 463.000000000000000000
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 183.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 4
     DisableFocusEffect = True
     DefaultItemStyles.ItemStyle = ''
     DefaultItemStyles.GroupHeaderStyle = ''
     DefaultItemStyles.GroupFooterStyle = ''
-    Viewport.Width = 196.000000000000000000
-    Viewport.Height = 459.000000000000000000
+    Viewport.Width = 636.000000000000000000
+    Viewport.Height = 179.000000000000000000
   end
 end
